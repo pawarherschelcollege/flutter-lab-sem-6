@@ -1,4 +1,3 @@
-
 // Copyright (c) 2019, the Dart project authors.  Please see the AUTHORS file
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
@@ -41,9 +40,9 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }
-  
-  void _decrementCounter(){
-    setState((){
+
+  void _decrementCounter() {
+    setState(() {
       _counter--;
     });
   }
@@ -72,48 +71,46 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: Wrap(
-                  direction: Axis.vertical,
-                  children: <Widget>[
-                        Container( 
-                          margin: const EdgeInsets.all(10),
-                          child: FloatingActionButton(
-                            onPressed: _incrementCounter,
-                            tooltip: 'Increment',
-                            child: const Icon(Icons.add),
-                          )
-                        ),
-                        Container( 
-                          margin: const EdgeInsets.all(10),
-                          child: FloatingActionButton(
-                            onPressed: _decrementCounter,
-                            tooltip: 'Decrement',
-                            child: const Icon(Icons.remove),
-                          )
-                        ),
-                        Container(
-                          margin: const EdgeInsets.all(10),
-                          child: FloatingActionButton(
-                            onPressed:(){ 
-                              _incrementCounter();
-                              _incrementCounter();
-                             },
-                            tooltip: 'Increment Twice',
-                            child: const Text('+ x2'),
-                          )
-                        ),
-                        Container(
-                          margin: const EdgeInsets.all(10),
-                          child: FloatingActionButton(
-                            onPressed:(){ 
-                              _decrementCounter();
-                              _decrementCounter();
-                             },
-                            tooltip: 'Decrement Twice',
-                            child: const Text('- x2'),
-                          )
-                        ),
-                ],
-            ),
+        direction: Axis.vertical,
+        children: <Widget>[
+          Container(
+              margin: const EdgeInsets.all(10),
+              child: FloatingActionButton(
+                onPressed: _incrementCounter,
+                tooltip: 'Increment',
+                child: const Icon(Icons.add),
+              )),
+          Container(
+              margin: const EdgeInsets.all(10),
+              child: FloatingActionButton(
+                onPressed: _decrementCounter,
+                tooltip: 'Decrement',
+                child: const Icon(Icons.remove),
+              )),
+          Container(
+              margin: const EdgeInsets.all(10),
+              child: FloatingActionButton(
+                onPressed: () {
+                  _incrementCounter();
+                  _incrementCounter();
+                },
+                tooltip: 'Increment Twice',
+                child: const Text('+ x2'),
+              )),
+          Container(
+              margin: const EdgeInsets.all(10),
+              child: FloatingActionButton(
+                onPressed: () {
+                  _decrementCounter();
+                  _decrementCounter();
+                },
+                tooltip: 'Decrement Twice',
+                child: const Text('- x2'),
+              )),
+        ],
+      ),
     );
   }
+}
+
 }

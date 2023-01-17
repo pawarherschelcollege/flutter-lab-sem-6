@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:helloworld/counter.dart' as counter;
 
 void main() => runApp(MyApp());
 
@@ -31,11 +32,23 @@ class MyHomePage extends StatelessWidget {
         // The title text which will be shown on the action bar
         title: Text(title),
       ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
+      body: Column(
+        children: [
+          FlatButton(
+            onPressed: () { runApp(Counter()) }, 
+            child: Text('Counter')
+            )
+        ],
+      )
+      // body: Center(
+      //   child: Text(
+      //     'Hello, World!',
+      //   ),
+      // ),
     );
+  }
+
+  void runCounter(){
+    runApp(counter.main());
   }
 }
